@@ -7,6 +7,13 @@ from categories.models import Category
 from django.test import TestCase
 
 
+class TestCategoryModels(TestCase):
+
+    def test_slugify(self):
+        category = Category.objects.create(name='Test Category')
+        self.assertEqual(category.slug, "test-category")
+
+
 class TestCategoryThumbnail(TestCase):
 
     def test_thumbnail(self):
