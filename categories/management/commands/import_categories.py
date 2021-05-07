@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
-
-from slugify import slugify
+from django.template.defaultfilters import slugify
 
 from categories.models import Category
 from categories.settings import SLUG_TRANSLITERATOR
